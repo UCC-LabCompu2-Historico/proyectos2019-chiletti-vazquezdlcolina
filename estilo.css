@@ -1,6 +1,52 @@
-.header{
+@import url(https://fonts.googleapis.com/css?family=Erica+One);
 
+h1 {
+    cursor: default;
+    position: relative;
+    top: 30px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100px;
+    margin: auto;
+    display: block;
+
+    -webkit-animation: bounce .3s ease infinite alternate;
+
+    font-family: 'Erica One', cursive;
+    font-size: 80px;
+    color: #FFF;
+    text-align: left;
+    line-height: 100px;
+    text-shadow: 0 1px 0 #CCC,
+    0 2px 0 #CCC,
+    0 3px 0 #CCC,
+    0 4px 0 #CCC,
+    0 5px 0 #CCC,
+    0 6px 0 transparent,
+    0 7px 0 transparent,
+    0 8px 0 transparent,
+    0 9px 0 transparent,
+    0 10px 10px rgba(0, 0, 0, .6);
 }
+/* ANIMATION */
+@-webkit-keyframes bounce {
+    100% {
+        top: -30px;
+
+        text-shadow: 0 1px 0 #CCC,
+        0 2px 0 #CCC,
+        0 3px 0 #CCC,
+        0 4px 0 #CCC,
+        0 5px 0 #CCC,
+        0 6px 0 #CCC,
+        0 7px 0 #CCC,
+        0 8px 0 #CCC,
+        0 9px 0 #CCC,
+        0 30px 30px rgba(0, 0, 0, .3);
+    }
+}
+
 .box{
     border: 1px solid blue ;
     padding-top: 25px;
@@ -62,6 +108,40 @@
     padding-left: 280px;
 }
 
+aside{
+    float: right;
+    overflow: hidden;
+    margin-top: -392px;
+    margin-right: 140px;
+}
 
+footer{
+    padding-top: 200px;
+}
 
+.p1{
+    font-family:sans-serif  ;
+    text-align: justify;
+}
 
+.img1{
+    padding-top: 50px;
+}
+
+.imgFooter{
+    padding-left: 982px;
+    position: relative;
+    padding-block: 0px;
+    margin-top: -37px;
+    border-top-left-radius:     1em 5em;
+    border-top-right-radius:    1em 5em;
+    border-bottom-right-radius: 1em 5em;
+    border-bottom-left-radius:  1em 5em;
+}
+
+h2{
+    font-size: 30pt;
+    font-family: sans-serif;
+    text-shadow: 10px 11px 18px rgba(300, 180, 100, 1),
+    -10px -11px 18px red
+}
