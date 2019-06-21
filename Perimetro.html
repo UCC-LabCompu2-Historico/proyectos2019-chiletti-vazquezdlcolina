@@ -51,12 +51,17 @@
 <section>
     <h3>Triángulo</h3>
     <div class="box">
-        <p><i>Fórmula = *4</i></p>
+        <p><i>Fórmula = LA + LB + LC</i></p>
     </div>
-    <p>Ingrese el lado para el cálculo:</p>
-    <p><input type="number" name="lado" id="lado"></p>
-    <p><input type="button" name="botonCalcular2" value="Calcular Perímetro" onclick="perimetroCuadrado()"></p>
+    <p>Ingrese el lado A para el cálculo:</p>
+    <p><input type="number" name="lado" id="lado1"></p>
+    <p>Ingrese el lado B para el cálculo:</p>
+    <p><input type="number" name="lado" id="lado2"></p>
+    <p>Ingrese el lado C para el cálculo:</p>
+    <p><input type="number" name="lado" id="lado3"></p>
+    <p><input type="button" name="botonCalcular2" value="Calcular Perímetro" onclick="perimetroTriangulo()"></p>
 </section>
+
 <section>
     <div class="graf">
         <canvas id="miCanvas2" width="400" height="200" style="border:2px solid #000000;">

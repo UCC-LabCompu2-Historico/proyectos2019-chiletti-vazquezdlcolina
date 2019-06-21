@@ -108,6 +108,7 @@ function dibujarTriangulo() {
   var canvas = document.getElementById('miCanvas2');
   if (canvas.getContext){
     var ctx = canvas.getContext('2d');
+    var ladoT1 = parseFloat(document.getElementById(''))
     ctx.beginPath();
     ctx.moveTo(75,50);
     ctx.lineTo(100,75);
