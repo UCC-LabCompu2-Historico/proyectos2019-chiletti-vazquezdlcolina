@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>Perímetro</title>
     <link rel="stylesheet" type="text/css" href="estilo.css" media="screen">
+    <!--<script type="text/javascript" src="javascript.js"></script>-->
+    <script type="text/javascript" src="funciones.js"></script>
+
 </head>
 <body background="images/background.jpg">
 
@@ -15,7 +18,7 @@
 
 <nav>
     <div style="float:right" >
-        <a href="Principal.html"><img src="images/home.png" height="50" width="50"></a>
+        <a href="Index.html"><img src="images/home.png" height="50" width="50"></a>
     </div>
 </nav>
 
@@ -31,11 +34,45 @@
 <section>
     <h3>Circulo</h3>
     <div class="box">
-        <p><i>C=2πr</i></p>
+        <p><i>Fórmula = 2πr</i></p>
     </div>
-    <p>Ingrese el radio para el calculo:</p>
-    <p><input type="number" name="radio"></p>
-    <p>El perimetro es: </p><!--Luego de los dos puntos se va a mostrar el resultado cuando se agrege javascript-->
+    <p>Ingrese el radio para el cálculo:</p>
+    <p><input type="number" name="radio" id="radio"></p>
+    <p><input type = "button" name="botonCalcular1" value="Calcular Perímetro" onclick="perimetroCirculo()"></p>
+</section>
+<section>
+    <div class="graf">
+        <canvas id="miCanvas" width="400" height="200" style="border:2px solid #000000;">
+    </div>
+</section>
+<section>
+    <p>Gráfico sobre el cálculo</p>
+</section>
+<section>
+    <h3>Triángulo</h3>
+    <div class="box">
+        <p><i>Fórmula = *4</i></p>
+    </div>
+    <p>Ingrese el lado para el cálculo:</p>
+    <p><input type="number" name="lado" id="lado"></p>
+    <p><input type="button" name="botonCalcular2" value="Calcular Perímetro" onclick="perimetroCuadrado()"></p>
+</section>
+<section>
+    <div class="graf">
+        <canvas id="miCanvas2" width="400" height="200" style="border:2px solid #000000;">
+    </div>
+</section>
+<section>
+    <p>Gráfico sobre el cálculo</p>
+</section>
+<section>
+    <h3>Cuadrado</h3>
+    <div class="box">
+        <p><i>Fórmula = L*4</i></p>
+    </div>
+    <p>Ingrese el lado para el cálculo:</p>
+    <p><input type="number" name="lado" id="lado"></p>
+    <p><input type="button" name="botonCalcular2" value="Calcular Perímetro" onclick="perimetroCuadrado()"></p>
 </section>
 <section>
     <div class="graf">
@@ -43,7 +80,24 @@
     </div>
 </section>
 <section>
+    <p><input type="button" name="botonDibujar" value="Dibujar" onclick="Dibujar()"></p>
     <p>Gráfico sobre el cálculo</p>
+</section>
+<section>
+    <h3>Rectángulo</h3>
+    <div class="box">
+        <p><i>Fórmula = 2(b*h)</i></p>
+    </div>
+    <p>Ingrese la base para el cálculo:</p>
+    <p><input type="number" name="base" id="base"></p>
+    <p>Ingrese la altura para el cálculo</p>
+    <p><input type="number" name="altura" id="altura"></p>
+    <p><input type = "button" name="botonCalcular3" value="Calcular Perímetro" onclick="perimetroRectangulo()"></p>
+</section>
+<section>
+    <div class="graf">
+        <canvas width="400" height="200" style="border:2px solid #000000;">
+    </div>
 </section>
 
 </body>

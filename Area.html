@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <title>Area</title>
     <link rel="stylesheet" type="text/css" href="estilo.css" media="screen">
+    <script type="text/javascript" src="funciones.js"></script>
 </head>
-<body>
-
 <body background="images/background.jpg">
 
 <header>
@@ -17,7 +16,7 @@
 
 <nav>
     <div style="float:right" >
-        <a href="Principal.html"><img src="images/home.png" height="50" width="50"></a>
+        <a href="Index.html"><img src="images/home.png" height="50" width="50"></a>
     </div>
 </nav>
 
@@ -32,25 +31,47 @@
 </section>
 <section>
     <h3>Circulo</h3>
-
     <div class="box">
         <p><i>A=πr<sup>2</sup></i></p>
     </div>
-
-    <p>Ingrese el radio para el calculo:</p>
-    <p><input type="number" name="radio"></p>
-    <p>El Area es: </p><!--Luego de los dos puntos se va a mostrar el resultado cuando se agrege javascript-->
+    <p>Ingrese el radio para el cálculo:</p>
+    <p><input type="number" name="radio2" id="radio2"></p>
+    <p><input type = "button" name="botonCalcularA" value="Calcular Área" onclick="areaCirculo()"></p>
 </section>
+
 <section>
-    <div class="graf">
-        <canvas width="400" height="200" style="border:2px solid #000000;">
+    <h3>Triángulo</h3>
+    <div class="box">
+        <p><i>Fórmula = (b * h) / 2 </i></p>
     </div>
-</section>
-<section>
-    <p>Gráfico sobre el cálculo</p>
+    <p>Ingrese la base para el cálculo:</p>
+    <p><input type="number" name="base2" id="base2"></p>
+    <p>Ingrese la altura para el cálculo</p>
+    <p><input type="number" name="altura2" id="altura2"></p></p>
+    <p><input type = "button" name="botonCalcularB" value="Calcular Área" onclick="areaTriangulo()"></p>
 </section>
 
-</body>
+<section>
+    <h3>Cuadrado</h3>
+    <div class="box">
+        <p><i>Fórmula = L<sup>2</sup></i></p>
+    </div>
+    <p>Ingrese el lado para el cálculo:</p>
+    <p><input type="number" name="ladoCuadrado" id="ladoCuadrado"></p>
+    <p><input type = "button" name="botonCalcularC" value="Calcular Área" onclick="areaCuadrado()"></p>
+</section>
+
+<section>
+    <h3>Rectángulo</h3>
+    <div class="box">
+        <p><i>Fórmula = (b * h)</i></p>
+    </div>
+    <p>Ingrese la base para el cálculo:</p>
+    <p><input type="number" name="baseRectangulo" id="baseRectangulo"></p>
+    <p>Ingrese la altura para el cálculo</p>
+    <p><input type="number" name="alturaRectangulo" id="alturaRectangulo"></p></p>
+    <p><input type = "button" name="botonCalcularD" value="Calcular Área" onclick="areaRectangulo()"></p>
+</section>
 
 </body>
 </html>
