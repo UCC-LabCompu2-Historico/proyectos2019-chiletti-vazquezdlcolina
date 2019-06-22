@@ -136,6 +136,7 @@ var posX;
 var can;
 var contexto;
 var direccion;
+
 window.onload = function() {
     can = document.getElementById("miCanvas");
     contexto = can.getContext("2d");
@@ -143,6 +144,12 @@ window.onload = function() {
     direccion = 0;
     setInterval("dibujarCirculo()",2);
 }
+/*
+ * Dibuja un circulo en base a un radio ingresado por el usuario y se rebota entre el eje x.
+ * @method dibujarCirculo
+ * @param no tiene.
+ * @return La imagen de un círculo con moviento. 
+ */
 function dibujarCirculo() {
     var radioC = parseFloat(document.getElementById('radio').value);
     if (direccion == 0)
@@ -163,7 +170,12 @@ function dibujarCirculo() {
     contexto.stroke();
     contexto.fill();
 }
-
+/*
+ * Dibuja un triangulo en base a tres lados ingresados por el usuario.
+ * @method dibujarTriangulo.
+ * @param no tiene.
+ * @return La imagen de un triangulo. 
+ */
 function dibujarTriangulo() {
   var canvas = document.getElementById('miCanvas2');
   if (canvas.getContext){
@@ -181,6 +193,13 @@ function dibujarTriangulo() {
     ctx.fill();
   }
 }
+
+/*
+ * Dibuja un cuadrado en base a un lado ingresado por el usuario y se mueve en el eje y.
+ * @method dibujarCuadrado
+ * @param no tiene.
+ * @return La imagen de un cuadrado con moviento. 
+ */
 function dibujarCuadrado(){
 var canvas, ctx, x, y, direccion = 0;
 var ladoCuadrado = parseFloat(document.getElementById('lado').value); 
@@ -202,6 +221,13 @@ setInterval(function() {
 }, 2);
 }
 
+/*
+ * Dibuja un Rectangulo en base a una base y altura ingresados por el usuario y arriba se dibuja otro 
+ * rectangulo de las mismas características pero rotado a 45°.
+ * @method dibujarRectangulo
+ * @param no tiene.
+ * @return La imagen de un rectangulo con otro igual rotado a 45°. 
+ */
 function dibujarRectangulo(){ 
 
     var canvas=document.getElementById("miCanvas4"); 
@@ -217,20 +243,27 @@ function dibujarRectangulo(){
     ctx.fill(); 
 
     dibujarRectanguloRotado(startX,startY,baseR,alturaR,45); 
-    window.requestAnimationFrame(dibujarRectanguloRotado);
+ /*
+ * Dibuja un rectangulo de las mismas características pero rotado a 45°.
+ * @method dibujarRectanguloRotado
+ * @param x.
+ * @param y.
+ * @param width.
+ * @param height.
+ * @param grados.
+ * @return La imagen de un rectangulo con otro igual rotado a 45°. 
+ */
 
-    function dibujarRectanguloRotado(x,y,width,height,degrees){ 
+    function dibujarRectanguloRotado(x,y,width,height,grados){ 
 
      ctx.save(); 
      ctx.beginPath(); 
      ctx.translate(x+width/2, y+height/2); 
-     ctx.rotate(degrees*Math.PI/180); 
+     ctx.rotate(grados*Math.PI/180); 
      ctx.rect(-width/2, -height/2, baseR,alturaR); 
      ctx.fillStyle="gold"; 
      ctx.fill(); 
-     ctx.restore(); 
-
-
+     ctx.restore();
     } 
     
 }
