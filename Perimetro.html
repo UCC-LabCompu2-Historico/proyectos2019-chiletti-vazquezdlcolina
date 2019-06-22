@@ -42,7 +42,7 @@
 </section>
 <section>
     <div class="graf">
-        <canvas id="miCanvas" width="400" height="200" style="border:2px solid #000000;">
+        <canvas id="miCanvas" width="400" height="200" style="border:2px solid #000000;"></canvas>
     </div>
 </section>
 <section>
@@ -59,7 +59,7 @@
     <p><input type="number" name="lado" id="lado2"></p>
     <p>Ingrese el lado C para el cálculo:</p>
     <p><input type="number" name="lado" id="lado3"></p>
-    <p><input type="button" name="botonCalcular2" value="Calcular Perímetro" onclick="perimetroTriangulo()"></p>
+    <p><input type="button" name="botonCalcular2" value="Calcular Perímetro" onclick="draw()"></p>
 </section>
 
 <section>
@@ -68,7 +68,7 @@
     </div>
 </section>
 <section>
-    <p>Gráfico sobre el cálculo</p>
+    <p><input type="button" name="dibujo" value="Dibujar" onclick="dibujarTriangulo()"></p>
 </section>
 <section>
     <h3>Cuadrado</h3>
@@ -81,11 +81,11 @@
 </section>
 <section>
     <div class="graf">
-        <canvas width="400" height="200" style="border:2px solid #000000;">
+        <canvas id="miCanvas3" width="400" height="200" style="border:2px solid #000000;">
     </div>
 </section>
 <section>
-    <p><input type="button" name="botonDibujar" value="Dibujar" onclick="Dibujar()"></p>
+    <p><input type="button" name="botonDibujar" value="Dibujar" onclick="dibujarCuadrado()"></p>
     <p>Gráfico sobre el cálculo</p>
 </section>
 <section>
@@ -101,9 +101,10 @@
 </section>
 <section>
     <div class="graf">
-        <canvas width="400" height="200" style="border:2px solid #000000;">
+        <canvas id="miCanvas4" width="400" height="200" style="border:2px solid #000000;">
     </div>
 </section>
-
+<p><input type="button" name="botonDibujar" value="Dibujar" onclick="dibujarRectangulo()"></p>
+<p>Gráfico sobre el cálculo</p>
 </body>
 </html>

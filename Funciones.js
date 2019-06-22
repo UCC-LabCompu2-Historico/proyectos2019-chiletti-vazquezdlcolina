@@ -108,15 +108,71 @@ function dibujarTriangulo() {
   var canvas = document.getElementById('miCanvas2');
   if (canvas.getContext){
     var ctx = canvas.getContext('2d');
-    var ladoT1 = parseFloat(document.getElementById(''))
+    var ladoT1 = parseFloat(document.getElementById('lado1').value);
+    var ladoT2 = parseFloat(document.getElementById('lado2').value);
+    var ladoT3 = parseFloat(document.getElementById('lado3').value);
+    var px = canvas.width/2;
+    var py = canvas.height/2;
     ctx.beginPath();
-    ctx.moveTo(75,50);
-    ctx.lineTo(100,75);
-    ctx.lineTo(100,25);
+    ctx.moveTo(px,py);
+    ctx.lineTo(ladoT1,ladoT2);
+    ctx.lineTo(ladoT2, ladoT3);
     ctx.closePath();
     ctx.fill();
   }
 }
+function dibujarCuadrado(){
+var canvas, ctx, x, y, direccion = 0;
+var ladoCuadrado = parseFloat(document.getElementById('lado').value); 
+canvas = document.getElementById('miCanvas3');
+ctx = canvas.getContext('2d');
+x = canvas.width/2;
+y = 0;
+setInterval(function() {
+   ctx.clearRect(0, 0, canvas.width, canvas.height);
+    if (direccion == 0)
+        y++;
+    else
+        y--;
+    if (y==350)
+        direccion = 1;
+    if (y==50)
+        direccion = 0;
+   ctx.fillRect(x, y, ladoCuadrado, ladoCuadrado);
+}, 2);
+}
 
+function dibujarRectangulo(){ 
+
+    var canvas=document.getElementById("miCanvas4"); 
+    var ctx=canvas.getContext("2d"); 
+    var baseR = parseFloat(document.getElementById('base').value);
+    var alturaR = parseFloat(document.getElementById('altura').value);
+    var startX=canvas.width/2; 
+    var startY=canvas.height/2; 
+
+    ctx.beginPath(); 
+    ctx.rect(startX,startY,baseR,alturaR); 
+    ctx.fillStyle="blue"; 
+    ctx.fill(); 
+
+    dibujarRectanguloRotado(startX,startY,baseR,alturaR,45); 
+    window.requestAnimationFrame(dibujarRectanguloRotado);
+
+    function dibujarRectanguloRotado(x,y,width,height,degrees){ 
+
+     ctx.save(); 
+     ctx.beginPath(); 
+     ctx.translate(x+width/2, y+height/2); 
+     ctx.rotate(degrees*Math.PI/180); 
+     ctx.rect(-width/2, -height/2, baseR,alturaR); 
+     ctx.fillStyle="gold"; 
+     ctx.fill(); 
+     ctx.restore(); 
+
+
+    } 
+    
+}
 
 
