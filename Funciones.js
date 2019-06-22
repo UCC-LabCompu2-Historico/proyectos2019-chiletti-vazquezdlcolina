@@ -1,3 +1,9 @@
+/**Funcion trunc delimita la cantidad de cifras decimales a mostrar en resultado
+ * @method trunc
+ * @param x
+ * @param posiciones
+ * @return {number}
+*/
 function trunc (x, posiciones = 0) {
   var s = x.toString()
   var l = s.length
@@ -6,6 +12,13 @@ function trunc (x, posiciones = 0) {
   return Number(numStr)
 }
 
+
+/**
+ *Calcula el perimetro del circulo
+ * @method pemitroCirculo
+ * @param Radio, ingresado por usuario
+ * @return Valor del perimetro
+ */
 function perimetroCirculo(){
     var pi = Math.PI;
     var radio = parseFloat(document.getElementById('radio').value);
@@ -14,6 +27,15 @@ function perimetroCirculo(){
     alert("El resultado es: " + resultadoTruncado);
 }
 
+
+/**
+ *Calcula el perimetro del triangulo
+ * @method pemitroTriangulo
+ * @param ladoA, ingresado por usuario
+ * @param ladoB, ingresado por usuario
+ * @param ladoC, ingresado por usuario
+ * @return Valor del perimetro
+ */
 function perimetroTriangulo(){
       var ladoA = parseFloat(document.getElementById('lado1').value);
       var ladoB = parseFloat(document.getElementById('lado2').value);
@@ -22,7 +44,13 @@ function perimetroTriangulo(){
       var resultadoTruncado = trunc(resultado, 2);
       alert("El resultado es: " + resultadoTruncado);
 }
-
+/**
+ *Calcula el perimetro del cuadrado
+ * @method pemitroCuadrado
+ * @param base, ingresado por usuario
+ * @param altura, ingresado por usuario
+ * @return Valor del perimetro
+ */
 function perimetroCuadrado(){
     var lado = parseFloat(document.getElementById('lado').value);
     var resultado = 4 * lado 
@@ -30,6 +58,13 @@ function perimetroCuadrado(){
     alert("El resultado es: " + resultadoTruncado);
 }
 
+/**
+ *Calcula el perimetro del rectangulo
+ * @method pemitroRectangulo
+ * @param base, ingresado por usuario
+ * @param altura, ingresado por usuario
+ * @return Valor del perimetro
+ */
 function perimetroRectangulo(){
   var base = parseFloat(document.getElementById('base').value);
   var altura = parseFloat(document.getElementById('altura').value);
@@ -39,6 +74,12 @@ function perimetroRectangulo(){
 
 }
 
+/**
+ *Calcula el area del circulo
+ * @method areaCirculo
+ * @param radio, ingresado por usuario
+ * @return Valor del area
+ */
 function areaCirculo(){
     var pi = Math.PI;
     var radio = parseFloat(document.getElementById('radio2').value);
@@ -47,15 +88,27 @@ function areaCirculo(){
     alert("El resultado es: " + resultadoTruncado);
 }
 
+/**
+ *Calcula el area del triangulo
+ * @method areaTriangulo
+ * @param baseT, ingresado por usuario
+ * @param alturaT, ingresado por usuario
+ * @return Valor del area
+ */
 function areaTriangulo(){
     var baseT = parseFloat(document.getElementById('base2').value);
     var alturaT = parseFloat(document.getElementById('altura2').value);
     var resultado = (baseT * alturaT) / 2;
     var resultadoTruncado = trunc(resultado, 2);
     alert("El resultado es: " + resultadoTruncado);
-
 }
 
+/**
+ *Calcula el area del cuadrado
+ * @method areaCuadrado
+ * @param ladoCD, ingresado por usuario
+ * @return Valor del area
+ */
 function areaCuadrado(){
     var ladoCD = parseFloat(document.getElementById('ladoCuadrado').value);
     var resultado = (ladoCD * ladoCD);
@@ -63,6 +116,13 @@ function areaCuadrado(){
     alert("El resultado es: " + resultadoTruncao);
 }
 
+/**
+ *Calcula el area del rectangulo
+ * @method areaRectangulo
+ * @param baseR, ingresado por usuario
+ * @param alturaR, ingresado por usuario
+ * @return Valor del area
+ */
 function areaRectangulo(){
   var baseR = parseFloat(document.getElementById('baseRectangulo').value);
   var alturaR = parseFloat(document.getElementById('alturaRectangulo').value);
