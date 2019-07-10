@@ -147,8 +147,8 @@ window.onload = function() {
     posX=15;
     posY = 15;
     direccion = 0;
-    setInterval("dibujarCirculo()",2);
-    setInterval("dibujarCuadrado()",2);
+    setInterval("dibujarCirculo()",5);
+    setInterval("dibujarCuadrado()",10);
 }
 /*
  * Dibuja un circulo en base a un radio ingresado por el usuario y se rebota entre el eje x.
@@ -162,9 +162,9 @@ function dibujarCirculo() {
         posX++;
     else
         posX--;
-    if (posX==350)
+    if (posX==250)
         direccion = 1;
-    if (posX==50)
+    if (posX==25)
         direccion = 0;
 
     can.width = can.width; // limpia el canvas
@@ -192,9 +192,9 @@ function dibujarTriangulo() {
     var px = canvas.width/2;
     var py = canvas.height/2;
     ctx.beginPath();
-    ctx.moveTo(px,py);
+    ctx.moveTo(px,ladoT1);
     ctx.lineTo(ladoT1,ladoT2);
-    ctx.lineTo(ladoT2, ladoT3);
+    ctx.lineTo(ladoT2,py);
     ctx.closePath();
     ctx.fill();
   }
@@ -213,9 +213,9 @@ function dibujarCuadrado(){
         posY++;
     else
         posY--;
-    if (posY==350)
+    if (posY==100)
         direccion = 1;
-    if (posY==50)
+    if (posY==20)
         direccion = 0;
 
    can1.width = can1.width; // limpia el canvas    
