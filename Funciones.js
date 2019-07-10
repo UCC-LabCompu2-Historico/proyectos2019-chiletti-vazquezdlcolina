@@ -133,16 +133,22 @@ function areaRectangulo(){
 
 
 var posX;
+var posY;
 var can;
+var can1;
 var contexto;
+var ctx;
 var direccion;
-
 window.onload = function() {
     can = document.getElementById("miCanvas");
+    can1 = document.getElementById("miCanvas3")
     contexto = can.getContext("2d");
+    ctx = can1.getContext("2d");
     posX=15;
+    posY = 15;
     direccion = 0;
     setInterval("dibujarCirculo()",2);
+    setInterval("dibujarCuadrado()",2);
 }
 /*
  * Dibuja un circulo en base a un radio ingresado por el usuario y se rebota entre el eje x.
@@ -201,24 +207,25 @@ function dibujarTriangulo() {
  * @return La imagen de un cuadrado con moviento. 
  */
 function dibujarCuadrado(){
-var canvas, ctx, x, y, direccion = 0;
-var ladoCuadrado = parseFloat(document.getElementById('lado').value); 
-canvas = document.getElementById('miCanvas3');
-ctx = canvas.getContext('2d');
-x = canvas.width/2;
-y = 0;
-setInterval(function() {
-   ctx.clearRect(0, 0, canvas.width, canvas.height);
+    var ladoCuadrado = parseFloat(document.getElementById('lado').value); 
+    x = can1.width/2;
     if (direccion == 0)
-        y++;
+        posY++;
     else
-        y--;
-    if (y==350)
+        posY--;
+    if (posY==350)
         direccion = 1;
-    if (y==50)
+    if (posY==50)
         direccion = 0;
-   ctx.fillRect(x, y, ladoCuadrado, ladoCuadrado);
-}, 2);
+
+   can1.width = can1.width; // limpia el canvas    
+   ctx.strokeStyle = "#000000";
+   ctx.fillStyle = "blue";
+   ctx.beginPath();
+   ctx.fillRect(x, posY, ladoCuadrado, ladoCuadrado);
+   ctx.closePath();
+   ctx.stroke();
+   ctx.fill();
 }
 
 /*

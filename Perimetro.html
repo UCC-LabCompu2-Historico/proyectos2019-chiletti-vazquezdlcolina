@@ -8,7 +8,7 @@
     <script type="text/javascript" src="funciones.js"></script>
 
 </head>
-<body background="images/background.jpg">
+<body>
 
 <header>
     <div class="header">
@@ -17,8 +17,8 @@
 </header>
 
 <nav>
-    <div style="float:right" >
-        <a href="Index.html"><img src="images/home.png" height="50" width="50"></a>
+    <div class="divNav">
+        <a href="Index.html"><img src="images/home.png" class="imgHome"></a>
     </div>
 </nav>
 
@@ -41,8 +41,8 @@
     <p><input type = "button" name="botonCalcular1" value="Calcular Perímetro" onclick="perimetroCirculo()"></p>
 </section>
 <section>
-    <div class="graf">
-        <canvas id="miCanvas" width="400" height="200" style="border:2px solid #000000;"></canvas>
+    <div class="graf" >
+        <canvas id="miCanvas"></canvas>
     </div>
 </section>
 <section>
@@ -59,12 +59,12 @@
     <p><input type="number" name="lado" id="lado2"></p>
     <p>Ingrese el lado C para el cálculo:</p>
     <p><input type="number" name="lado" id="lado3"></p>
-    <p><input type="button" name="botonCalcular2" value="Calcular Perímetro" onclick="draw()"></p>
+    <p><input type="button" name="botonCalcular2" value="Calcular Perímetro" onclick="perimetroTriangulo()"></p>
 </section>
 
 <section>
     <div class="graf">
-        <canvas id="miCanvas2" width="400" height="200" style="border:2px solid #000000;">
+        <canvas id="miCanvas2"></canvas>
     </div>
 </section>
 <section>
@@ -81,7 +81,7 @@
 </section>
 <section>
     <div class="graf">
-        <canvas id="miCanvas3" width="400" height="200" style="border:2px solid #000000;">
+        <canvas id="miCanvas3"></canvas>
     </div>
 </section>
 <section>
@@ -101,7 +101,7 @@
 </section>
 <section>
     <div class="graf">
-        <canvas id="miCanvas4" width="400" height="200" style="border:2px solid #000000;">
+        <canvas id="miCanvas4"></canvas>
     </div>
 </section>
 <p><input type="button" name="botonDibujar" value="Dibujar" onclick="dibujarRectangulo()"></p>
